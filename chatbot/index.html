@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Antioxida – المساعد الذكي</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;700&family=Poppins:wght@400;500;600&family=DM+Sans:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app">
+    <!-- The whole conversation lives here (rendered by js/chat.js) -->
+    <main id="thread" class="thread" aria-live="polite"></main>
+
+    <!-- Composer: type or speak -->
+    <form id="composer" class="composer">
+      <button id="composer-mic" class="composer__mic" type="button" aria-label="اتكلم">
+        <img src="assets/icon-mic.svg" width="32" height="32" alt="">
+      </button>
+      <input id="composer-input" class="composer__input" type="text" placeholder="اكتب أو دوس على الميكروفون واتكلم" aria-label="اكتب رسالتك">
+      <button class="composer__send" type="submit" aria-label="إرسال">
+        <img src="assets/icon-send.svg" width="32" height="32" alt="">
+      </button>
+    </form>
+
+    <!-- Bottom navigation (navbar component) -->
+    <nav class="tab-bar" aria-label="القائمة الرئيسية">
+      <a class="tab-bar__item" href="#" aria-current="page">
+        <span class="tab-bar__icon">
+          <img src="assets/icon-follow.svg" width="26" height="24" alt="">
+          <span class="badge">3</span>
+        </span>
+        <span>المتابعه</span>
+      </a>
+      <a class="tab-bar__item" href="#">
+        <span class="tab-bar__icon"><img src="assets/icon-calendar.svg" width="24" height="24" alt=""></span>
+        <span>التقدم</span>
+      </a>
+      <a class="tab-bar__item" href="#">
+        <span class="tab-bar__icon"><img src="assets/icon-activity.svg" width="24" height="24" alt=""></span>
+        <span>قياساتك</span>
+      </a>
+      <a class="tab-bar__item" href="#">
+        <span class="tab-bar__icon"><img src="assets/icon-food.png" width="24" height="24" alt=""></span>
+        <span>الأغذيه</span>
+      </a>
+      <a class="tab-bar__item" href="#">
+        <span class="tab-bar__icon">
+          <img src="assets/icon-menu.svg" width="24" height="24" alt="">
+          <span class="badge">3</span>
+        </span>
+        <span>القائمه</span>
+      </a>
+    </nav>
+  </div>
+
+  <!-- Plain scripts (no modules) so the page also works when opened by double-click -->
+  <script src="js/api.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/chat.js"></script>
+</body>
+</html>
